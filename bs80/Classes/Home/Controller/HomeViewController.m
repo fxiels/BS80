@@ -22,20 +22,19 @@
 
 @implementation HomeViewController
 
+ UITextField *textField;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = GlobalBg;
-    
-    UITextField *textField1;
-    textField1 = [[UITextField alloc] initWithFrame:CGRectMake (10, 80 , self.view.frame.size.width-20, 30)];
-    // textField.frame=CGRectMake(60, 70 , 200, 30);
-    [textField1 setBorderStyle:UITextBorderStyleRoundedRect];
-    [self.view addSubview:textField1];
+    textField = [[UITextField alloc] initWithFrame:CGRectMake (10, 80 , self.view.frame.size.width-20, 30)];
+    [textField setBorderStyle:UITextBorderStyleRoundedRect];
+    [self.view addSubview:textField];
 
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeSystem];
-    btn.frame=CGRectMake(self.view.frame.size.width/2-50, 88, 100, 100);
+    btn.frame=CGRectMake(10, 120 , self.view.frame.size.width-20, 30);
     [btn setTitle:@"搜索" forState:UIControlStateNormal];
+    btn.backgroundColor = [UIColor whiteColor];
     [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
@@ -168,9 +167,16 @@
     // NSLog(@"---当扫描到某一个服务的特征的时候会调用该方法外围交互的特征--%@---%@---%@",peripheral,characteristic,error);
     
     NSLog(@"收到数据%@-\n---%@-\n--",[self hexadecimalString:characteristic.value],characteristic.value);
+    NSString *result = [[NSString alloc] initWithData:characteristic.value  encoding:NSUTF8StringEncoding];
+    
+    textField.text=result;
 }
 
-
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+    [textField resignFirstResponder];
+}
 
 
 
