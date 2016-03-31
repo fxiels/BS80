@@ -34,8 +34,8 @@ UIScrollView *scrollView;
     
     
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-180/2, 10, 180, 40)];
-    label.text = @"bs80蓝牙扫描设置条码";
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-260/2, 10, 260, 40)];
+    label.text = NSLocalizedString(@"LblTitle", nil);
     [scrollView addSubview:label];
     
     

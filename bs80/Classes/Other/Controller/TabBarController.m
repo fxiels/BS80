@@ -20,8 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupChildVc:[[HomeViewController alloc] init] title:@"主页" image:@"icon_tabbar_mine" selectedImage:@"icon_tabbar_mine_selected"];
-    [self setupChildVc:[[HelpViewController alloc] init] title:@"帮助" image:@"icon_tabbar_onsite" selectedImage:@"icon_tabbar_onsite_selected"];
+    [self setupChildVc:[[HomeViewController alloc] init] title:NSLocalizedString(@"Home", nil) image:@"icon_tabbar_mine" selectedImage:@"icon_tabbar_mine_selected"];
+    [self setupChildVc:[[HelpViewController alloc] init] title:NSLocalizedString(@"Help", nil) image:@"icon_tabbar_onsite" selectedImage:@"icon_tabbar_onsite_selected"];
     
 }
 

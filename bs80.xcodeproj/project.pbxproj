@@ -16,6 +16,9 @@
 		065BDC7C1CAA9D57005B28BC /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065BDC7B1CAA9D57005B28BC /* HelpViewController.m */; };
 		065BDC7F1CAA9D68005B28BC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065BDC7E1CAA9D68005B28BC /* HomeViewController.m */; };
 		0671BC7E1CAAA21000696014 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0671BC7D1CAAA21000696014 /* Images.xcassets */; };
+		06A3F8D21CAD5EC500319086 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06A3F8D61CAD5EC500319086 /* Localizable.strings */; };
+		06A3F8D31CAD5EC500319086 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06A3F8D61CAD5EC500319086 /* Localizable.strings */; };
+		06A3F8D41CAD5EC500319086 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06A3F8D61CAD5EC500319086 /* Localizable.strings */; };
 		06AF0B611CABFE3100FF1B00 /* ManagerScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AF0B601CABFE3100FF1B00 /* ManagerScan.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,8 @@
 		065BDC7D1CAA9D68005B28BC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		065BDC7E1CAA9D68005B28BC /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		0671BC7D1CAAA21000696014 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		06A3F8D51CAD5EC500319086 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		06A3F8D71CAD5EC700319086 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		06AF0B5F1CABFE3100FF1B00 /* ManagerScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerScan.h; sourceTree = "<group>"; };
 		06AF0B601CABFE3100FF1B00 /* ManagerScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerScan.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +138,7 @@
 			children = (
 				0671BC7D1CAAA21000696014 /* Images.xcassets */,
 				065BDC3E1CAA9B65005B28BC /* Info.plist */,
+				06A3F8D61CAD5EC500319086 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 065BDC211CAA9B65005B28BC;
 			productRefGroup = 065BDC2B1CAA9B65005B28BC /* Products */;
@@ -362,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0671BC7E1CAAA21000696014 /* Images.xcassets in Resources */,
+				06A3F8D21CAD5EC500319086 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A3F8D31CAD5EC500319086 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A3F8D41CAD5EC500319086 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +436,18 @@
 			targetProxy = 065BDC4F1CAA9B65005B28BC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		06A3F8D61CAD5EC500319086 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06A3F8D51CAD5EC500319086 /* en */,
+				06A3F8D71CAD5EC700319086 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		065BDC551CAA9B65005B28BC /* Debug */ = {

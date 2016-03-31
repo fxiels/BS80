@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  bs80
+
+  Created by xie on 16/3/31.
+  Copyright © 2016年 bs80. All rights reserved.
+*/
+"Home" = "主页";
+"Help" = "帮助" ;
+
+"Search"="搜索" ;
+"LblTitle"="        BS80蓝牙扫描设置条码      ";
+

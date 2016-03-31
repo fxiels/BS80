@@ -33,7 +33,7 @@
 
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeSystem];
     btn.frame=CGRectMake(10, 120 , self.view.frame.size.width-20, 30);
-    [btn setTitle:@"搜索" forState:UIControlStateNormal];
+    [btn setTitle:NSLocalizedString(@"Search", nil) forState:UIControlStateNormal];
     btn.backgroundColor = [UIColor whiteColor];
     [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
