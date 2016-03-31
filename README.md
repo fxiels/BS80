@@ -1,2 +1,4 @@
 # BS80
-BS80蓝牙扫描客户端
+BS80_Scan demo
+
+Please give me a star,thank you.
