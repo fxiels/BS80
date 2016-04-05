@@ -84,6 +84,11 @@
       "scale" : "2x"
     },
     {
+      "idiom" : "car",
+      "size" : "60x60",
+      "scale" : "3x"
+    },
+    {
       "size" : "512x512",
       "idiom" : "mac",
       "filename" : "iTunesArtwork.png",

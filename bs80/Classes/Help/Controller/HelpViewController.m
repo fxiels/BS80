@@ -23,11 +23,9 @@ UIScrollView *scrollView;
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
-    
     scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     scrollView.backgroundColor = [UIColor whiteColor];
-    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height*1.2);
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height*1.1);
     [scrollView flashScrollIndicators];
     scrollView.directionalLockEnabled = YES;
     [self.view addSubview:scrollView];
@@ -39,16 +37,7 @@ UIScrollView *scrollView;
     [scrollView addSubview:label];
     
     
-    
-    
-    UIImageView  *imageSpp=[[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-300/2, 70, 300, 150)];
-    [imageSpp setImage:[UIImage imageNamed:@"spp"]];
-    [scrollView addSubview:imageSpp];
-    
-    
-    
-    
-    UIImageView  *imageBle=[[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-300/2, 230, 300, 150)];
+    UIImageView  *imageBle=[[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-300/2, 70, 300, 150)];
     [imageBle setImage:[UIImage imageNamed:@"ble"]];
     [scrollView addSubview:imageBle];
     
