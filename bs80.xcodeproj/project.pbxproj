@@ -15,7 +15,7 @@
 		065BDC761CAA9C2B005B28BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 065BDC711CAA9C2B005B28BC /* main.m */; };
 		065BDC7C1CAA9D57005B28BC /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065BDC7B1CAA9D57005B28BC /* HelpViewController.m */; };
 		065BDC7F1CAA9D68005B28BC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065BDC7E1CAA9D68005B28BC /* HomeViewController.m */; };
-		0671BC7E1CAAA21000696014 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0671BC7D1CAAA21000696014 /* Images.xcassets */; };
+		06976E9D1CB3BA5E0026C3B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06976E9C1CB3BA5E0026C3B6 /* Images.xcassets */; };
 		06A3F8D21CAD5EC500319086 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06A3F8D61CAD5EC500319086 /* Localizable.strings */; };
 		06A3F8D31CAD5EC500319086 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06A3F8D61CAD5EC500319086 /* Localizable.strings */; };
 		06A3F8D41CAD5EC500319086 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06A3F8D61CAD5EC500319086 /* Localizable.strings */; };
@@ -59,7 +59,7 @@
 		065BDC7B1CAA9D57005B28BC /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		065BDC7D1CAA9D68005B28BC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		065BDC7E1CAA9D68005B28BC /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		0671BC7D1CAAA21000696014 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		06976E9C1CB3BA5E0026C3B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		06A3F8D51CAD5EC500319086 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		06A3F8D71CAD5EC700319086 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		06AF0B5F1CABFE3100FF1B00 /* ManagerScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerScan.h; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		065BDC2D1CAA9B65005B28BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0671BC7D1CAAA21000696014 /* Images.xcassets */,
+				06976E9C1CB3BA5E0026C3B6 /* Images.xcassets */,
 				065BDC3E1CAA9B65005B28BC /* Info.plist */,
 				06A3F8D61CAD5EC500319086 /* Localizable.strings */,
 			);
@@ -368,8 +368,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0671BC7E1CAAA21000696014 /* Images.xcassets in Resources */,
 				06A3F8D21CAD5EC500319086 /* Localizable.strings in Resources */,
+				06976E9D1CB3BA5E0026C3B6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
