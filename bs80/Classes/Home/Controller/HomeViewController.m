@@ -18,27 +18,31 @@
 @property(nonatomic,strong)NSMutableArray *peripherals;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSOperationQueue *opQueue;
+@property (nonatomic,strong) UITextView *textView;
 @end
 
 @implementation HomeViewController
 
- UITextField *textField;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = GlobalBg;
-    textField = [[UITextField alloc] initWithFrame:CGRectMake (10, 80 , self.view.frame.size.width-20, 30)];
-    [textField setBorderStyle:UITextBorderStyleRoundedRect];
-    [self.view addSubview:textField];
-
+    self.textView = [[UITextView alloc] initWithFrame:CGRectMake (10, 80 , self.view.frame.size.width-20, 250)];
+    [self.view addSubview:self.textView ];
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    self.textView.layer.cornerRadius = 4;
+    
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeSystem];
-    btn.frame=CGRectMake(10, 120 , self.view.frame.size.width-20, 30);
+    btn.frame=CGRectMake(10, self.textView.frame.origin.y+270 , self.view.frame.size.width-20, 30);
     [btn setTitle:NSLocalizedString(@"Search", nil) forState:UIControlStateNormal];
     btn.backgroundColor = [UIColor whiteColor];
     [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    btn.layer.cornerRadius = 4;
     [self.view addSubview:btn];
     
-    self.tableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, self.view.frame.size.height-300) style:UITableViewStylePlain];
+    
+    self.tableView=[[UITableView alloc] initWithFrame:CGRectMake(0, btn.frame.origin.y+40, self.view.frame.size.width, self.view.frame.size.height-btn.frame.origin.y-self.tabBarController.tabBar.frame.size.height-40) style:UITableViewStylePlain];
     self.tableView.delegate=self;
     self.tableView.dataSource=self;
     [self.view addSubview:self.tableView];
@@ -100,10 +104,10 @@
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
 {
     for (CBService *serivce in peripheral.services) {
-    NSLog(@"--5555555-%@",serivce.UUID.UUIDString);
-    if ([serivce.UUID.UUIDString isEqualToString:@"FFF0"]) {
-        // characteristicUUIDs : 可以指定想要扫描的特征(传nil,扫描所有的特征)
-        [peripheral discoverCharacteristics:nil forService:serivce];
+        NSLog(@"--5555555-%@",serivce.UUID.UUIDString);
+        if ([serivce.UUID.UUIDString isEqualToString:@"FFF0"]) {
+            // characteristicUUIDs : 可以指定想要扫描的特征(传nil,扫描所有的特征)
+            [peripheral discoverCharacteristics:nil forService:serivce];
         }
     }
     NSLog(@"--发现外围设备的服务");
@@ -169,13 +173,13 @@
     NSLog(@"收到数据%@-\n---%@-\n--",[self hexadecimalString:characteristic.value],characteristic.value);
     NSString *result = [[NSString alloc] initWithData:characteristic.value  encoding:NSUTF8StringEncoding];
     
-    textField.text=result;
+    self.textView.text=result;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     
-    [textField resignFirstResponder];
+    [self.textView  resignFirstResponder];
 }
 
 
